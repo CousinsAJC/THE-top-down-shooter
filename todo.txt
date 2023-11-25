@@ -1,0 +1,8 @@
+- Ammo not shooting from correct location
+- Enemies collision
+- Ammo collision
+- Player collision
+- Enemy AI improvements to chase Player
+- Enemy Attacks
+- Map to walk around in
+- Make camera more fluid
