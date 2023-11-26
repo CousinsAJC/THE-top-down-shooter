@@ -6,10 +6,12 @@ end
 
 
 function weaponsUpdate(dt)
-    rocket1.update(rocket1, p1.centerX, p1.centerY, dt)
-    gun1.update(gun1, p1.centerX, p1.centerY, dt)
+    if p1.weapon == "rocket1" then
+        rocket1.update(rocket1, p1.centerX, p1.centerY, dt)
+    elseif p1.weapon == "gun1" then
+        gun1.update(gun1, p1.centerX, p1.centerY, dt)
+    end
 end
-
 
 
 function weaponsDraw()

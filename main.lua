@@ -14,7 +14,7 @@ function love.load()
 
     cam = camera()
 
-    cursor_load() 
+    cursor_load()
 
     p1 = Player(50, 50, "p1")
     weaponsLoad()
