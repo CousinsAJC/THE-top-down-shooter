@@ -7,7 +7,6 @@ function Player:new(x, y, charNum)
     self.char = charNum
     self.speed = 200
     self.weapon = "rocket1"
-    self.range = 200
     self.scale= 1.5
     self.centerX = self.x + (24 * self.scale)
     self.centerY = self.y + (24 * self.scale)

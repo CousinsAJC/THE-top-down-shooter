@@ -3,8 +3,8 @@ function fire(player, weapon, x, y, button, ox, oy)
     local startY = oy
     local mouseX = x
     local mouseY = y
-    local ammoCenterX = weapon.ammoImage:getWidth() / 2 * player.ammoScale
-    local ammoCenterY = weapon.ammoImage:getWidth() / 2 * player.ammoScale
+    local ammoCenterX = weapon.ammoImage:getWidth() / 2
+    local ammoCenterY = weapon.ammoImage:getWidth() / 2
 
     local angle = math.atan2((mouseY - startY), (mouseX - startX))
     local ammoDX = weapon.speed * math.cos(angle)
