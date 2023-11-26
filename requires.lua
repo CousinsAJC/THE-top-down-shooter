@@ -17,3 +17,5 @@ require "enemies/slime"
 require "keypresses"
 require "player"
 require "cursor"
+
+require "assets/sfx/sfx"
