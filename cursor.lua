@@ -5,6 +5,7 @@ function cursor_load()
     myCursor.y = love.mouse.getY()
     myCursor.scaleX = 1.5
     myCursor.scaleY = 1.5
+    myCursor.targetImage = love.graphics.newImage("assets/sprites/target.png")
     love.mouse.setVisible(false)
     trueMouseX = love.mouse.getX()
     trueMouseY = love.mouse.getY()
@@ -182,9 +183,10 @@ function cursor_update()
 end
 
 function cursor_draw()
-    love.graphics.draw(myCursor.image, trueMouseX, trueMouseY, nil, myCursor.scaleX, myCursor.scaleY)
+    love.graphics.draw(myCursor.image, myCursor.centerX, myCursor.centerY, nil, myCursor.scaleX, myCursor.scaleY)
+    --love.graphics.draw(myCursor.targetImage, trueMouseX, trueMouseY, nil, 1.5, 1.5)
     love.graphics.setColor(1, 0, 0, 1)
-    love.graphics.circle("fill", trueMouseX, trueMouseY, 3)
+    love.graphics.circle("fill", myCursor.x, myCursor.y, 3)
     love.graphics.print(cursorDistance, p1.x + 20, p1.y - 40)
     love.graphics.print(math.deg(cursorAngle), p1.x + 20, p1.y + 100)
 end

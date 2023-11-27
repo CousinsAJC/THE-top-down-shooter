@@ -38,6 +38,12 @@ function Player.update(self, dt)
     self.centerX = self.x + (24 * self.scale)
     self.centerY = self.y + (24 * self.scale)
 
+    if self.weapon == "rocket1" then
+        circleRange = rocket1.range
+    elseif self.weapon == "gun1" then
+        circleRange = gun1.range
+    end
+
     --get player movement whether keyboard/mouse or controller
     delta = self.controller(self, dt)
     self.move(self, delta, dt)
@@ -57,7 +63,14 @@ end
 
 function Player.draw(self)
     --Draw player animation
+    love.graphics.setColor(1, 1, 1, .02)
+    love.graphics.circle("fill", self.centerX, self.centerY, circleRange)
+    love.graphics.setColor(1, 1, 1, 1)
     self.anim:draw(p1.sprite_Sheet, p1.x, p1.y, nil, self.scale, self.scale)
+
+    
+    
+    
 
     --draw table of ammunition fired
     for i,v in ipairs(self.ammo) do
